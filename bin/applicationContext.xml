@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	                       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd">
+
+	<!--IUserDao userDao = new UserDaoImpl(); -->
+	<bean id="userDao" class="spring.UserDaoImpl"></bean>
+	<bean id="userDao2" class="spring.UserDaoImpl_2"></bean>
+	
+	<!-- UserService userService = new UserService(userDao); -->
+	<bean id="userService" class="spring.UserService">
+		<constructor-arg ref="userDao2"></constructor-arg>
+	</bean>
+
+</beans>
