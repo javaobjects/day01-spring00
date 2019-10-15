@@ -17,6 +17,7 @@ public class Test {
 		 *      新的UserDaoImpl_2.java实现方式二
 		 */
 
+
 	}
 
 }
